@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <style>
+    body {
+      background: linear-gradient(to right, #87CEEB, #1E90FF); /* Updated Sky Blue Gradient */
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+ 
+    .login-container {
+      background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent White */
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+      width: 350px;
+      text-align: center;
+      animation: floatAnimation 3s infinite alternate; /* Floating Animation */
+    }
+ 
+    @keyframes floatAnimation {
+      from { transform: translateY(0); }
+      to { transform: translateY(-10px); }
+    }
+ 
+    .login-container h2 {
+      color: #4682B4; /* Steel Blue */
+      margin-bottom: 20px;
+    }
+ 
+    input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+ 
+    button {
+      background-color: #87CEEB; /* Green */
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      animation: glowAnimation 2s infinite alternate;
+    }
+ 
+    @keyframes glowAnimation {
+      from { box-shadow: 0 0 10px #87CEEB; }
+      to { box-shadow: 0 0 20px #87CEEB, 0 0 30px #87CEEB; }
+    }
+ 
+    button:hover {
+      background-color: #87CEEB;
+    }
+ 
+    
+  </style>
+</head>
+<body>
+ 
+<div class="login-container">
+  <img src="img1.png" alt="" style="height: 35px; width: 110px;">  
+  <h3 style="color: #2882a5;">ETS Reference Kit</h3>
+
+  <form onsubmit="return validateLogin()">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required>
+ 
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+ 
+    <button type="submit">Login</button>
+  </form>
+ 
+  
+</div>
+ 
+<script>
+  function validateLogin() {
+    var username = document.getElementById('username').value;
+    var password = document.getElementById('password').value;
+
+    
+ 
+    // Check if the username and password match the predefined values
+    if (username === 'system' && password === 'password') {
+      alert('Login successful!');
+      startLogoutTimer(); 
+      window.location.href = 'index1.html';
+      return false; // Allow the form submission
+    } else {
+      alert('Invalid username or password. Please try again.');
+      return false; // Prevent the form submission 
+    }
+  }
+ 
+  function startLogoutTimer() {
+    // Set a timer to logout after 60 minutes (in milliseconds)
+    setTimeout(function() {
+      alert('Logout due to inactivity. Please log in again.');
+      // You can add code here to redirect the user to the logout page or perform other logout actions
+    }, 60 * 60 * 1000); // 60 minutes
+  }
+</script>
+ 
+</body>
+</html>
+
+
