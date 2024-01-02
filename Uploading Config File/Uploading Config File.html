@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uploading Config File</title>
+
+    </head>
+    <body>
+        <header>
+            <h2 style="text-align: center;">Uploading Config File</h2>
+
+        </header>
+        <main>
+            <h3> How to Perform a Configuration Update with a New Config File</h3>
+            <ol>
+                <li> Open up the request to see what file is being requested to be updated.</li>
+                <br>
+                <br>
+                <img src="img1.png" alt="" style="height: 500px; width: 800px;">
+                <br>
+                <br>
+                <li>Download the Config file from attachments or,</li>
+                <a href="https://centurylink.sharepoint.com/sites/SPTETS-Team/IETS/ETSLibrary/Forms/AllItems.aspx">https://centurylink.sharepoint.com/sites/SPTETS-Team/IETS/ETSLibrary/Forms/AllItems.aspx</a>
+                <br>
+                <br>
+                <li>Login to WinScp through JumpServer</li>
+                <br>
+                <br>
+                <img src="img2.png" alt="" style="height: 300px; width: 500px;">
+                <br>
+                <br>
+                <li>Copy downloaded file from local system to JumpServer using Drag and Drop in WinScp.</li>
+                <br>
+                <br>
+                <img src="img3.png" alt="" style="height: 500px; width: 800px;">
+                <br>
+                <br>
+                <li>Spawn the servers using Spawn Utility and login.</li>
+                <br>
+                <br>
+                <li>In Admin server go to the given path in the instruction and take the backup of existing file.</li>
+                <br>
+                <br>
+                <li>Using SCP command get the file from JumpServer to current location</li>
+                <br>
+                <br>
+                <p style="color: rgb(0, 102, 255);">Ex: scp -r ad34087@vlodjumpts00.dev.qintra.com:/tmp/ad34087/US_export_policy.jar .</p>
+                <li>In stager using WLSDEPLOY script sync all the manageed servers with option 12</li>
+                <br>
+                <br>
+                <img src="img4.png" alt="" style="height: 300px; width: 550px;">
+                <br>
+                <br>
+                <li>Bounce the server using 7 and 8 Options </li>
+                <br>
+                <br>
+                <img src="img5.png" alt="" style="height: 300px; width: 550px;">
+                <br>
+                <br>
+                <li>Check the URLs and close the ticket.</li>
+
+            </ol>
+        </main>
+    </body>
+</html>

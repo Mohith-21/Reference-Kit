@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EAP Rollback Release</title>
+
+    </head>
+    <body>
+        <header>
+            <h2 style="text-align: center;">How to Rollback FOSS EAP Build</h2>
+
+        </header>
+        <main>
+            <h3>Quick Steps without pictures: </h3>
+            <ol>
+                <li><b>Login to our stager vlodjumpts00 with your cuid & sudo to the appid</b></li>
+                <p>[ad34087@vlodjumpts00 ~]$ sudo su - epwfbtch <br>
+                    Last login: Wed Dec 27 06:04:53 CST 2023 on pts/6
+                    </p>
+                <li><b>STOP application using eapdeploy script from stager vlodjumpts00</b></li>
+                <p>[epwfbtch@vlodjumpts00 ~]$ eapdeploy
+                    Enter epwfbat's target environment ( e2e test1 test2 test3 ): test1
+                    </p>
+                <li><b>Stop the cluster using main menu with option <i>2</i> and exit from main menu with option <i>8</i></b></li>
+                <br>
+                <img src="img1.png" alt="" style="height: 150px; width: 770px;">
+                <br>
+                <li><b>Go to <i> cd /app-imports/eap_test_oma/epwfbat/test1/epwfbat-test1</b></i></li>
+                <br>
+                <img src="img2.png" alt="" style="height: 150px; width: 770px;">
+                <br>
+                <li><b  style="color: brown;">$ rm current</b></li>
+                <br>
+                <li><b  style="color: brown;">ln -s 2024-01.7 current</b></li>
+                <br>
+                <li><b  style="color: brown;">ls -lrt</b></li>
+                <br>
+                <li><b>START application using eapdeploy script from stager vlodjumpts00 with <i style="color: rgb(53, 100, 6);">eapdeploy</i> main menu</b></li>
+            </ol>
+        </main>
+    </body>
+</html>

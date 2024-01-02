@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DotNetIM Install Process</title>
+
+    </head>
+    <body>
+        <header>
+            <h2 style="text-align: center;">DOTNET 2019 Install Instructions </h2>
+
+        </header>
+        <main>
+            <h3>Quick Steps without pictures: </h3>
+            <ol>
+                <li> Log into ETS portal <a href="http://et.dev.qintra.com/stsclient/Login.aspx" target="_blank"> http://et.dev.qintra.com/stsclient/Login.aspx;</a> assign ticket, update status In-Progress</li>
+                <br>
+                <br>
+                <li> Log into the 2019 stager  usomawvdntst01.test.intranet <br>
+
+                    &emsp; Navigate to   D:\Inetpub\AdminScripts\DotNetInstallManager_Win2019 <br>
+                    
+                    &emsp; Right click on DotNetInstallManager.exe and run as administrator <br>
+                    
+                    &emsp; Click View Install requests, highlight request, click Fetch Code, click yes</li>
+                <br>
+                <br>
+                <li>Check Inventory <a href="http://et.dev.qintra.com/etsinvmtc/Inventory/Applications.aspx" target="_blank"> http://et.dev.qintra.com/etsinvmtc/Inventory/Applications.aspx;</a> verify version & urls work</li>
+                <br>
+                <br>
+                <li>Execute SOE checker tool as administrator - <b> D:\Inetpub\AdminScripts\SOE Checker v3.1\SOEChecker.exe </b></li>
+                <br>
+                <br>
+                <li>Execute KleanIT as administrator <b> – D:\inetpub\AdminScripts\KleanIT.exe </b>
+
+                    Note: if you need to delete only specific version – like for a rollback to earlier version and need to delete higher version use
+                    
+                     D:\Inetpub\AdminScripts\CleanupUtility_2019\CleanupUtility.exe</li>
+                <br>
+                <br>
+                <li> Log into ETS portal http://et.dev.qintra.com/stsclient/Login.aspx; select your ticket; <br>
+
+                    &emsp; There are several close statuses based on the outcome of the install. <br>
+                    
+                    &emsp; Choose the appropriate one. If no issues, choose Completed.</li>
+                <br>
+                <br>
+                <li>  Log off the 2019 stager <b style="color: blue;">usomawvdntst01.test.intranet </b></li>
+
+            </ol>
+            <h3>Steps for Automated install using DotNetInstallManager</h3>
+            <ol>
+                <li> Log into ETS portal <a href="http://et.dev.qintra.com/stsclient/Login.aspx" target="_blank"> http://et.dev.qintra.com/stsclient/Login.aspx;</a> assign ticket, update status In-Progress</li>
+                <br>
+                <br>
+                <img src="img1.jpg" alt="">
+                <br>
+                <br>
+                <li> Log into the 2019 stager  usomawvdntst01.test.intranet and Navigate to D:\Inetpub\AdminScripts\TestDotnetIM\10.10 <br>
+                    
+                    &emsp; Right click on DotNetInstallManager.exe and run as administrator <br>
+                    
+                <br>
+                <br>
+                <li>Click on View Install Request</li>
+                <br>
+                <img src="img2.jpg" alt="">
+                <br>
+                <br>
+                <li>Click on install request that assigned to your name and click on fetech code as shown below.</li>
+                <br>
+                <img src="img3.jpg" alt="">
+                <br>
+                <br>
+                <li>If you got error status vs complete status, you can click the sitename aanptest1 tab for details on the install errors.</li>
+                <br>
+                <br>
+                <img src="img5.jpg" alt="">
+                <br>
+                <br>
+                <li>The files are fetched to D:\Applications on the stager and after successful deployement click on close as Installation is completed.</li>
+                <br>
+                <br>
+                <img src="img4.jpg" alt="">
+                <br>
+                <br>
+                <li>Check the URLs in Inventory and close the ticket.</li>
+                <br>
+                <br>
+                <img src="img6.jpg" alt="">
+        </main>
+    </body>
+</html>

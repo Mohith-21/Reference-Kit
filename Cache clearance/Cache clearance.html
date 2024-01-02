@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cache clearance</title>
+
+    </head>
+    <body>
+        <header>
+            <h2 style="text-align: center;">CLEAR CACHE – Automated and Manual</h2>
+
+        </header>
+        <main>
+            <ul>
+                <li> AUTOMATED Clear Cache</li>
+                <p>The Clearcache script can be found on the ecom Stager(lxomavtecom00) at - <b> /export/apps/clearcacheWLS/clearcache.sh</b></p>
+            </ul>
+            <ol>
+                <li>Login to Ecom stager</li>
+                <li>Sudo to desired application (weblogic only)</li>
+                <li> Execute the ClearCache Script <b> /export/apps/clearcacheWLS/clearcache.sh</b></li>
+                <li>Type in the Alias ID of the desired application</li>
+                <li>The list of nodes will be printed, select any one of them or type 'all' to clear the cache on all nodes.</li>
+                <li>A confirmation message will be printed and you're done !</li>
+            </ol>
+            <p><b>NOTE:</b></p>
+            <p>The script logs all operations performed. We will make the script display the logfile's absolute path very soon.We will try and get it integrated in the WLSDEPLOY script as well.</p>
+        <ul>
+            <h4>MANUAL Clear Cache with Bounce Steps</h4>
+            <p>Hard Bounce :- Stopping all the servers at the same time and then restarting all the servers.</p>
+            <p>Rolling Bounce :- Stopping and starting the servers (i.e) Admin,managed servers one by one</p>
+        </ul>
+        <ul><h4>Hard Bounce with cache clearance:</h4></ul>
+        <p>At times bounce is asked with <b>cache clearance</b>. In such cases, STOP the application first.</p>
+        <div style="color: blue;">
+                <p>Stopping the application</p>
+            <ol>
+                <li> Sudo to the application from stager.</li>
+                <li>Give wlsdeploy.</li>
+                <li>Select “7”</li>
+                <li>Ensuring all the servers are down.</li>
+            </ol>
+        </div>
+        <p><Strong>Cache clearance</Strong></p>
+        <div style="color: green;">
+            <p style="color: black;">On Admin server:</p>
+            <p>App_alias-id (qcordering3 for qcordering in ITV3 environment)</p>
+            <p>ls -ltr</p>
+            <p>rm -rf tmp</p>
+            <p>App alias-id</p>
+            <p>cd AdminServer</p>
+            <p>ls -ltr</p>
+            <p>rm -rf cache tmp</p>
+            <p style="color: black;">On managed server:</p>
+            <p>App_alias-id</p>
+            <p>cd servers</p>
+            <p>ls -ltr</p>
+            <p>rm -rf app alias1/app alias2 (qcordering32 for qcordering ITV3 environment and managed server2)</p>
+        </div>
+        <div style="color: blue;">
+            <h4>START the application.</h4>
+            <ol>
+                <li>  From the stager give wlsdeploy</li>
+                <li>  Enter the option as “8”</li>
+                <li>  Ensure all the servers are up.</li>
+            </ol>
+        </div>
+        <div>
+            <h3> Rolling Bounce with cache clearance:</h3>
+            <ol>
+                <li> Stop one server by choosing managed stop in the wlsdeploy; then chose the server name displayed</li>
+                <li>After ensuring the application is down in that server perform the cache clearance</li>
+            </ol>
+            <div style="color: green;">
+                <p>On managed server:</p>
+                <p>App_alias-id </p>
+                <p>cd servers</p>
+                <p>ls -ltr</p>
+                <p>rm -rf appalias1/appalias2 (qcordering32 for qcordering ITV3 environment and manged server2)</p>
+            </div>
+        </div>
+        <ol>
+            <li> Ensure the application is up in the managed server only then move to the next server</li>
+            <li>  Now repeat step-1,2,3 in all managed servers.</li>
+        </ol>
+        </main>
+    </body>
+</html>

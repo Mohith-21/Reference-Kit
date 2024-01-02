@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaIM Automated Bounce</title>
+
+    </head>
+    <body>
+        <header>
+            <h2 style="text-align: center;">JavaIM Automated Bounce</h2>
+
+        </header>
+        <main>
+            <ol>
+                <li><p>There are two types of Application Bounce Requests</p><p>Hard – This is where the Application is brought completely down before being brought back up. Used when Application functionality has to be stopped to enact a change or fix an issue.<br></p><p>Rolling – This is where the Application is bounced one Server at a time to maintain functionality during the bounce. Used when an Application cannot afford to be completely down.</p></li>
+                <li><p> Log in to the Enterprise Support Portal and Navigate to the Application Services Queue. If you need assistance with this please go here:</p></li>
+                <a href="http://qtomanetvta44.dev.qintra.com/etsrefkit/portal/appservice.html">http://qtomanetvta44.dev.qintra.com/etsrefkit/portal/appservice.html</a>
+                <li><p>The first thing to check is whether the Request is classified as an Emer (Emergency) or not and whether the Application is Managed or Unmanaged. If the application is Unmanaged then you may proceed with working the request immediately. If it is Managed and an Emer then you may still proceed. If its Managed and not an Emer then you must adhere to the Build Schedule displayed at this link:</p></li>
+                <a href="http://enterprisetest.dev.qintra.com/ETWorkProg/InstWindMgmt.aspx">http://enterprisetest.dev.qintra.com/ETWorkProg/InstWindMgmt.aspx</a>
+                <li><p>Click the Edit Request button to Assign the Request to yourself and put the Request Status into Work in Progress</p></li>
+                <img src="img1.jpg" alt="" style="height: 70px; width: 400px;">
+                <li><p>  Save the changes by clicking the green Checkmark and your request should look like this with Assigned To being your name and the Status being Work in Progress</p></li>
+                <img src="img2.jpg" alt="" style="height: 170px; width: 900px;">
+                <li><p>Navigate to the Enterprise Inventory page by clicking the Inventory link under the Inv. & Maint. Menu at the top of the Portal Screen.</p></li>
+                <img src="img3.jpg" alt="" style="height: 150px; width: 500px;">
+                <li><p>Select Inventory then Applications and finally Applications – All to bring up all the applications under the Enterprise inventory.</p></li>
+                <img src="img4.jpg" alt="" style="height: 200px; width: 700px;">
+                <li><p>Find the appropriate Application Inventory Information page by using the correct filters. In this case by looking at the Bounce Request information select the Weblogic Test Platform and E2E Environment.</p></li>
+                <img src="img5.jpg" alt="" style="height: 200px; width: 1100px;">
+                <li><p>Once you've found your specific application information page on the far right there is a column heading called Install_Tool. If this says anything else besides WLSDeploy you will most likely not be able to use the Automated bounce functions in the Java Install Manager tool.</p></li>
+                <img src="img6.jpg" alt="" style="height: 200px; width: 900px;">
+                <li><p>Launch the Java Install Manager. If you need assistance with that you can click <a href="http://qtomanetvta44.dev.qintra.com/etsrefkit/JavaIM/JavaIM_Basics.htm" target="_blank">Here</a></p></li>
+                <li><p> Using the Request as a reference select the appropriate Env and Application listed in the request in the JavaIM tool Application Bounce Utility section.</p></li>
+                <img src="img7.jpg" alt="" style="height: 300px; width: 600px;">
+                <li><p> Next depending on the Req Type select either the Bounce App – Hard Stop or Bounce App – Rolling. In some situations depending on the Application you may have to use the Spawn Putty Session (Optional) but that will not be covered here.</p></li>
+                <img src="img8.jpg" alt="" style="height: 200px; width: 300px;">
+                <li><p> The Java Install Manager will automatically turn off the Sentry Alarming application during and back on after the bounce is complete.</p></li>
+                <img src="img9.jpg" alt="" style="height: 200px; width: 500px;">
+                <li><p>Java IM will automatically then spawn all the needed terminal windows and launch the automated bounce request scripts needed to perform a Hard Bounce</p></li>
+                <img src="img10.jpg" alt="" style="height: 200px; width: 600px;">
+                <li><p>While the script is running your will see this message display after a server has been bounced successfully.</p></li>
+                <img src="img11.jpg" alt="" style="height: 50px; width: 750px;">
+                <li><p>When the bounce is complete and everything went ok you will see a message like this in the InstallManager terminal window.</p></li>
+                <img src="img12.jpg" alt="" style="height: 300px; width: 400px;">
+                <li><p>After the bounce is complete you need to then reference the Application Inventory page Test_URLs section to verify the application is up and running properly. You must test each URL.</p></li>
+                <img src="img13.jpg" alt="" style="height: 150px; width: 1000px;">
+                <li><p>Once you have verified that each URL works as expected you can then go back to the Request Portal and close out the bounce request. Click on the green checkmark to close out the request.</p></li>
+                <img src="img14.jpg" alt="" style="height: 150px; width: 700px;">
+                <li><p>You will see this pop-up window once the request is closed and the automated email sent out.</p></li>
+                <img src="img15.jpg" alt="" style="height: 150px; width: 400px;">
+            </ol>
+        </main>
+    </body>
+</html>

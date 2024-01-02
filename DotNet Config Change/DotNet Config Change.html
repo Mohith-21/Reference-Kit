@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DotNet Config Change</title> 
+
+    </head>
+    <body>
+        <header>
+            <h2 style="text-align: center;">WEB CONFIG update</h2>
+
+        </header>
+        <main>
+            <h3>ASMX or ASPX or ASXX web.config update</h3>
+            <ol>
+                <li>Request: Please update ASMX  web.config TEST3 GEOES with the attached one </li>
+                <br>
+                <br>
+                <li>Download the web.config file from attachemnts.</li>
+                <li>Login to the stager <b style="color: rgb(215, 17, 17);">usomawvdntst01.test.intranet</b></li>
+                <li>Take the back-up current web.config and web.test3.config</li>
+                <p> &emsp; go to: D:\inetpub\approot\sitename\version
+
+                    &emsp; rename web.config and web.test3.config using todays date </p>
+                <div class="example" style="color: rgb(127, 172, 255);">
+                    <p>
+                        <b>example: </b>
+                        <p>D:\inetpub\approot\geoestest3\3.0.0.9\web.config  </p>
+                        <p>rename to:: D:\inetpub\approot\geoestest3\3.0.0.9\web.20180122.config</p>
+                        <p>and</p>
+                        <p>D:\inetpub\approot\geoestest3\3.0.0.9\web.config  </p>
+                        <p>rename to:: D:\inetpub\approot\geoestest3\3.0.0.9\web.test3.20180122.config</p>
+                    </p>
+                </div>
+                <li>Copy file from local system and paste it in D:\inetpub\approot\geoestest3\3.0.0.9\web.config </li>
+                <li>Use BAM to deploy config file changes</li>
+                <p>D:\inetpub\AdminScripts\BAM</p>
+                <p>Click on Deploy Web button</p>
+            </ol>
+        </main>
+    </body>
+</html>

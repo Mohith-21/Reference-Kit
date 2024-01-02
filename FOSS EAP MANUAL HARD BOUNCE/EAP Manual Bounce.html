@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EAP Manual Bounce</title>
+
+    </head>
+    <body>
+        <header>
+            <h2 style="text-align: center;">FOSS EAP MANUAL HARD BOUNCE</h2>
+
+        </header>
+        <main>
+            <ol>
+                <li>First make sure to put request into 'Work in Progress'</li>
+                <br>
+                <img src="img1.jpg" alt="">
+                <br>
+                <li>Launch Java Install Manager Tool and select the Environment and Application to be bounced. And click on Spawn Putty Sessions.</li>
+                <br>
+                <img src="img2.jpg" alt="">
+                <br>
+                <li> Java Install Manager will spawn necessary terminal windows. Once the windows are spawned go to the Install Manager window and type <b>eapdeploy</b> to launch the FOSS EAP script.</li>
+                <br>
+                <img src="img3.jpg" alt="">
+                <br>
+                <li>The script will launch and ask you for the environment to execute against. In this case the request is for
+
+                    <b> test1</b>
+                    
+                </li>
+                <br>
+                <img src="img4.jpg" alt="">
+                <br>
+                <li>   The script main menu screen is displayed from here you can bounce the server cluster as well as
+
+                    Deploy application files and Administrate the cluster. Use option <b>2</b> to stop the cluster.
+                    
+                </li>
+                <br>
+                <img src="img5.jpg" alt="">
+                <br>
+                <li>Make sure that cluster is stopped using option <b>3)getClusterStatus</b>.</li>
+                <br>
+                <li>Use 1)StartCluster option to start and the cluster and use option 3 to get getClusterStatus will ping the servers and display their status on screen. You want to see a ‘Running’
+
+                    status for each server in the cluster.</li>
+                <br>
+                <img src="img6.jpg" alt="">
+                <br>
+                <li>Once the servers are up go back to Inventory page and verify that all the test URLs function as expected.
+
+                    As long as they do you may now close out the request.</li>
+            </ol>
+        </main>
+    </body>
+</html>

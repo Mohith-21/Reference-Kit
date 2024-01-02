@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thread Dump</title>
+
+    </head>
+    <body>
+        <header>
+            <h2 style="text-align: center;">Procedures to take Heap Dump :</h2>
+
+        </header>
+        <main>
+            <h3>Heap Dump generation for an Application pointing to JDK and JROCKIT:</h3>
+            <p>If Application is pointing to JDK then following STEPS:</p>
+            <ol>
+                <li>export PATH=/prod/appl/bea/home10.3/jdk1.6.0_17/bin:$PATH</li>
+                <br>
+                <li> cd /data/ecom2/bea/<AppDomain>/log</li>
+                    <p>  (eg : cd /data/ecom2/bea/qcquotingDomain/log)</p>
+                <li> jmap -J-d64 -dump:format=b,file=./'Name_of_Dump_file_to be_Created'.hprof -pid-</li>
+                    <p>(eg : jmap -J-d64 -dump:format=b,file=./MS1_300.hprof 19312 )</p>
+            </ol>
+            <h3>If Application is pointing to JROCKIT then following STEPS:</h3>
+            <p>EG: RXPS TEST1</p>
+            <ol>
+                <li>export PATH=/prod/appl/bea/home10.0.1/jrockit_150_65/bin:$PATH</li>
+                <br>
+                <li>cd /prod/ecom2/local/apps/apps10/rxps/current/logs</li>
+                <br>
+                <li>jrcmd pid hprofdump filename=./logs/rxps2.hprof</li>
+                <p> or Run using below command</p>
+                <p> /prod/appl/bea/home10.0.1/jrockit_150_65/bin/jrcmd  13141 hprofdump filename=./logs/rxps2.hprof</p>
+            </ol>
+        </main>
+    </body>
+</html>

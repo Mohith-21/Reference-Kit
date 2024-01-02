@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centralized (Enterprise/Mass_Market) End to End Shakeout Status</title>
+
+    </head>
+    <body>
+        <header>
+            <h2 style="text-align: center;">SANITY 2023</h2>
+
+        </header>
+        <main>
+            <h4>E2E Consumer Shakeout:--->>></h4>
+            <div style="list-style-type: none;">
+                <li>BMOM</li>
+                <li>DCEP-CONSUMER</li>
+                <li>EPWF</li>
+                <li>ESHOP</li>
+                <li>FFWF</li>
+                <li>MYA-MYACCOUNT</li>
+                <li>NTFWF</li>
+                <li>SFC</li>
+                <li>TOM</li>
+            </div>
+            <li>Check the Jenkins job - <a href="https://jenkinsprod.corp.intranet:8443/job/E2E_CONSUMER/job/E2E_CONSUMER_SHAKEOUT/" target="_blank">https://jenkinsprod.corp.intranet:8443/job/E2E_CONSUMER/job/E2E_CONSUMER_SHAKEOUT/</a></li>
+            <li>To trigger this job, execute this curl command in <b style="color: darkgreen;">vlodjumpts00</b></li>
+            <p style="color: #09651d;">curl --insecure https://ab10056:11b419a4bd7ccfba27fe2bac9a1015043e@jenkinsprod.corp.intranet:8443/job/E2E_CONSUMER/job/E2E_CONSUMER_SHAKEOUT/buildWithParameters?token=ETS4445564F5053&Environment=TEST4</p>
+            <img src="img1.png" alt="" style="height: 300px; width: 950px;">
+            <br>
+            <p>------------------------------------------------------------------------------------------------</p>
+            <br>
+            <h4>BPM-PORTAL/SES-LVLT/BPM-PORTAL------PIPELINE</h4>
+            <li>Check the Jenkins job - <a href="https://jenkinsprod.corp.intranet:8443/job/E2E_ENT_NorthCampus_PIPELINE/" target="_blank">https://jenkinsprod.corp.intranet:8443/job/E2E_ENT_NorthCampus_PIPELINE/</a></li>
+            <li>To trigger this job, execute this curl command in <b style="color: darkgreen;">vlodjumpts00</b></li>
+            <p style="color: #09651d;">curl --insecure https://ab10056:11b419a4bd7ccfba27fe2bac9a1015043e@jenkinsprod.corp.intranet:8443/job/E2E_ENT_NorthCampus_PIPELINE/buildWithParameters?token=ETS4445564F5053\&Environment=test4</p>
+            <br>
+            <br>
+            <p>-------------------------------------------------------------------------------------------------</p>
+            <br>
+            <h4>MKTPLCE/SERVICE-PORTAL---ENTRPRS_TST_MARVEL_E2EFiber</h4>
+            <li>Check the Jenkins job - <a href="https://jenkinsprod.corp.intranet:8443/job/Marvel_Test_Automation/job/ENTRPRS_TST_MARVEL_E2EFiber/" target="_blank">https://jenkinsprod.corp.intranet:8443/job/Marvel_Test_Automation/job/ENTRPRS_TST_MARVEL_E2EFiber/</a></li>
+            <li>To trigger this job, execute this curl command in <b style="color: darkgreen;">vlodjumpts00</b></li>
+            <p style="color: #09651d;">curl --insecure https://ab10056:11b419a4bd7ccfba27fe2bac9a1015043e@jenkinsprod.corp.intranet:8443/job/Marvel_Test_Automation/job/ENTRPRS_TST_MARVEL_E2EFiber/buildWithParameters?token=ETS4445564F5053&Environment=TEST4</p>
+            <br>
+            <br>
+            <p>-------------------------------------------------------------------------------------------------</p>
+            <br>
+            <p>Jenkins Job : E2E_ENT_NorthCampus_TAI <br> <br>
+
+                &emsp; &emsp; E2E_ENT_NorthCampus_SOPRANO <br> <br>
+      
+                &emsp; &emsp; E2E_ENT_NorthCampus_NETBUILD <br> <br>
+      
+                &emsp; &emsp; E2E_ENT_NorthCampus_PIPELINE</p>
+            <br>
+            <div style="list-style: none;">
+                <li><a href="https://jenkinsprod.corp.intranet:8443/job/E2E_ENT_NorthCampus_TAI/" target="_blank">https://jenkinsprod.corp.intranet:8443/job/E2E_ENT_NorthCampus_TAI/</a></li><br>
+                <li><a href="https://jenkinsprod.corp.intranet:8443/job/E2E_ENT_NorthCampus_SOPRANO/" target="_blank">ttps://jenkinsprod.corp.intranet:8443/job/E2E_ENT_NorthCampus_SOPRANO/</a></li><br>
+                <li><a href="https://jenkinsprod.corp.intranet:8443/job/E2E_ENT_NorthCampus_NETBUILD/" target="_blank">https://jenkinsprod.corp.intranet:8443/job/E2E_ENT_NorthCampus_NETBUILD/</a></li><br>
+                <li><a href="https://jenkinsprod.corp.intranet:8443/job/E2E_ENT_NorthCampus_PIPELINE/" target="_blank">https://jenkinsprod.corp.intranet:8443/job/E2E_ENT_NorthCampus_PIPELINE/</a></li><br>
+            </div>
+            <br>
+            <h4>NETBUILD</h4>
+            
+            <p style="color: #09651d;">curl --insecure https://ab10056:11b419a4bd7ccfba27fe2bac9a1015043e@jenkinsprod.corp.intranet:8443/job/E2E_ENT_NorthCampus_NETBUILD/buildWithParameters?token=ETS4445564F5053&Environment=TEST4</p>
+            <br>
+            <h4>TAI</h4>
+            
+            <p style="color: #09651d;">curl --insecure https://ab10056:11b419a4bd7ccfba27fe2bac9a1015043e@jenkinsprod.corp.intranet:8443/job/E2E_ENT_NorthCampus_TAI/buildWithParameters?token=ETS4445564F5053&Environment=TEST4</p>
+            <p>---------------------------------------------------------------------------------------------------------------------------------------</p>
+            <h4>MEDR</h4>
+            <p>Check the Jenkins job - <a href="https://jenkinsprod.corp.intranet:8443/job/PAS-Security-TST/job/PAS-Security-MEDR-EndtoEndTest" target="_blank">https://jenkinsprod.corp.intranet:8443/job/PAS-Security-TST/job/PAS-Security-MEDR-EndtoEndTest</a></p>
+            <p style="color: #09651d;">curl --insecure https://ab17768:11e9abf88f9a20959ba44ccaf12fcb31b5@jenkinsprod.corp.intranet:8443/job/PAS-Security-TST/job/PAS-Security-MEDR-EndtoEndTest/buildWithParameters?token=ETS4445564F5053&Environment=TEST1</p>
+            <p>------------------------------------------------------------------------------------------------------------------------------</p>
+            <br>
+            <h4>MOAB</h4>
+            <p><a href="https://jenkinsprod.corp.intranet:8443/job/NetStrat_TollFree_Shakeout/">https://jenkinsprod.corp.intranet:8443/job/NetStrat_TollFree_Shakeout/</a></p>
+            <p style="color: #09651d;">curl --insecure https://ab10056:11b419a4bd7ccfba27fe2bac9a1015043e@jenkinsprod.corp.intranet:8443/job/NetStrat_TollFree_Shakeout/buildWithParameters?token=ETS4445564F5053&Environment=TEST4</p>
+            <p>----------------------------------------------------------------------------------------------------------------------------</p>
+            <br>
+            <p>
+                
+M, Mallikarjun <a href="mailto:Mallikarjun.M@lumen.com">(Mallikarjun.M@lumen.com)</a>- HVOIP sanity owner <br> <br>
+
+
+Janagam, Manjunath <a href="mailto:Manjunath.Janagam@lumen.com">(Manjunath.Janagam@lumen.com)</a> - MEDR <br> <br>
+
+
+Gupta, Santhosh/Arputharaj, Premkumar <a href="mailto:Premkumar.Arputharaj@lumen.com">(Premkumar.Arputharaj@lumen.com)</a> - E2E consumer shakeout <br> <br>
+
+
+Boayella, Hanuman Prasad <a href="mailto:Hanumanprasad.Boayella@lumen.com">(Hanumanprasad.Boayella@lumen.com)</a>; Moorthy, Deepika <a href="mailto:Deepika.Moorthy@lumen.com">(Deepika.Moorthy@lumen.com)</a>-FIBER PLUS <br> <br>
+
+Zoom Regression Suite tests-Kulvi, Diksha/Mudda, Siddrameshwar <a href="mailto:Siddrameshwar.Mudda@lumen.com">(Siddrameshwar.Mudda@lumen.com)</a> <br> <br>
+
+EIS-FEDERAL-PORTAL-SANITY_ENV2 -- Kumar, Saurabh <a href="mailto:Saurabh.Kumar@lumen.com"> (Saurabh.Kumar@lumen.com)</a><br> <br>
+            </p>
+        </main>
+    </body>
+</html>

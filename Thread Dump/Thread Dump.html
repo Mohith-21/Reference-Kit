@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thread Dump</title>
+
+    </head>
+    <body>
+        <header>
+            <h2 style="text-align: center;">Weblogic & JBOSS Thread Dump</h2>
+
+        </header>
+        <main>
+            <h4>What is Java Thread Dump?</h4>
+            <p>A Java thread dump is a way of finding out what every thread in the JVM is doing at a particular point in time. This is especially useful if your Java application sometimes seems to hang when running under load, as an analysis of the dump will show where the threads are stuck.</p>
+            <h4>Why Thread Dump?</h4>
+            <p>If an application seems stuck, or is running out of resources, a thread dump will reveal the state of the server.</p>
+            <p>Java's thread dumps are a vital tool for server debugging. Because servlets are intrinsically multithreaded, it is very possible to create deadlocks without realizing it, or to have runaway threads that consume resources and cause OutOfMemory exceptions. That's especially true when you start adding third-party software like databases, EJB, and Corba ORBs.</p>
+            <h4>Steps to take Thread Dump In WEBLOGIC?</h4>
+            <ol>
+                <li>Identify the <b>application_name</b> (also referred to as APPLICATION_NAME) <br><br> and locate the managed servers through the normal methods. <br><br> SSH to each Managed server and perform steps 2-8.</li><br>
+
+                <li>Find the Java PID running the application </li>
+                <p style="color: green;">" ps -ef | grep java | grep application_name " <div style="color: black;">(the second value is the PID.)</div></p>
+                <li>Go to the application's output log directory </li>
+                <p style="color: green;">"cd /data/ecom2/bea/'application_name'Domain/log"</p>
+                <li>Tail the output log, and redirect it to a new file so you can capture the thread dump without the rest of the log.</li>
+                <p style="color: green;">"tail -f APPLICATION_NAME-output.log > APPLICATION_NAME_DATE.tdump &"</p>
+                <li> Generate 3 thread dumps 10-15 seconds apart by using the PID you found in Step 2 and issuing the following command 3 times 10-15 seconds apart.  "kill -3  PID"</li>
+                <li>After the dump is complete kill the tail process that is running in the background.  This is the easiest way to kill the first background process  "kill %1"</li>
+                <li>Verify the thread dumps exist in APPLICATION_NAME_DATE.tdump  </li>
+                <p style="color: green;">" cat APPLICATION_NAME_DATE.tdump | grep Full "</p>
+                <li>Mail the thread dump to Dev Team</li>
+                <p style="color: green;">" mail –s "APPLICATION_NAME_DATE.tdump" APPLICATION_NAME_DATE.tdump "</p>
+            </ol>
+            <h5><u>Steps to take Thread Dump In JBOSS</u></h5>
+            <p style="color: green;">jstack -l pid >>logfile.tdump</p>
+            <p>where,  pid  -  process ID
+                <p>logfile-name of log file</p>
+            </p>
+                
+            <div><p>For eg) for PCMT-APP
+                    <p style="color: rgb(0, 136, 255);">jstack –l 1872 >> server.log.tdump</p>
+                 </p>
+            </div>
+        </main>
+    </body>
+</html>

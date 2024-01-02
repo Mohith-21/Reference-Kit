@@ -1,0 +1,161 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    
+    
+}
+ 
+header, nav, aside, main {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #82ecfc;
+}
+body{
+    background-color: #fff;
+}
+
+
+header {
+    background-color: #fff;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 0 0;
+}
+
+.himg img {
+    width: 150px; 
+    height: 50px;
+    margin-right: 10px; 
+    
+}
+.hheader{
+    color: #2e90f1;
+    text-align: center;
+
+}
+.hheader {
+    
+    text-align: center;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background-color: #2e90f1;
+    justify-content:left
+    
+}
+
+
+nav li {
+    margin: 0;
+    padding: 1rem;
+    text-align: left;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+nav a:hover {
+    color: aliceblue;
+}
+nav {
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
+
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color:  #cecdcd;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(89, 212, 247, 0.2);
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out; 
+}
+
+.dropdown-content li {
+    padding: 10px;
+    transition: background-color 0.3s; 
+}
+
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    opacity: 1;
+}
+
+
+.dropdown-content li:hover {
+    background-color: #2e90f1; 
+}
+
+aside {
+    background-color: #f0f0f0;
+    width: 20%;
+    padding: 20px;
+    float : left;
+    margin: 0 0 0 0;
+}
+
+main {
+    background-color: #ffffff;
+    display: flex;
+    flex-grow: 1;
+    padding: 20px;
+    margin: 0 0 0 0;
+    height: 100vh;
+    overflow: auto;
+
+} 
+
+aside a {
+    text-decoration: none;
+    list-style: none;
+    display: inline-block;
+    margin-bottom: 10px;
+    color: #333;
+    transition: border 0.3s;
+    box-sizing: border-box;
+
+}
+
+aside a:hover {
+    color: #fff;
+    background-color: #333;
+    border: 2px solid #333;
+    box-sizing: border-box;
+}
+/*aside a:hover::before {
+    content: "";
+    position: absolute;
+    right: -5px;
+    bottom: -5px;
+    box-sizing: border-box;
+    top: -5px;
+    left: -5px;
+    
+   
+}*/
+aside ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+aside h4 {
+    margin-top: 0;
+}
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}

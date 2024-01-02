@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DotNet Web Application Bounce</title>
+
+    </head>
+    <body>
+        <header>
+            <h2 style="text-align: center;">DOTNET Bounce Web Application (asmx, aspx, asxx)</h2>
+
+        </header>
+        <main>
+            <h3>DOTNET Install Manager Bounce Process </h3>
+            <ol>
+                <li> Log into ETS portal <a href="http://et.dev.qintra.com/stsclient/Login.aspx" target="_blank"> http://et.dev.qintra.com/stsclient/Login.aspx;</a> assign ticket, update status In-Progress</li>
+                <br>
+                <br>
+                <li> Log into the 2019 stager  usomawvdntst01.test.intranet <br>
+
+                    &emsp; Navigate to   D:\Inetpub\AdminScripts\DotNetInstallManager_Win2019 <br>
+                    
+                    &emsp; Right click on DotNetInstallManager.exe and run as administrator <br>
+                <br>
+                <br>
+                <li>Click Application Manager Tab and then use the scroll bars to locate the application name and Test Env and then click Search button</li>
+                <br>
+                <br>
+                <img src="img1.jpg" alt="">
+                <br>
+                <br>
+                <li>Select all the sitenames and click on Stop selected on both Application Pool and Website.</li>
+                <br>
+                <br>
+                <img src="img2.jpg" alt="">
+                <br>
+                <br>
+                <li>Click refresh button to make sure everything is stopped</li>
+                <br>
+                <br>
+                <li>Select all the site names agian and click on start selected on both Application Pool and Website.</li>
+                <br>
+                <br>
+                <img src="img3.jpg" alt="">
+                <br>
+                <br>
+                <li>Make sure that all the sites are started.</li>
+            </ol>
+            <h3>IIS Stop/Start process</h3>
+            <ol>
+                <li>log on to  each application server and Click Start and then  Internet Information Services (IIS) Manager</li>
+                <br>
+                <br>
+                <img src="img4.jpg" alt="">
+                <br>
+                <br>
+                <li>Click on Application Pools on the left and highlight that name you want in the middle panel.</li>
+                <br>
+                <br>
+                <p>Click Stop on the right hand side.</p>
+                <br>
+                <br>
+                <img src="img5.jpg" alt="">
+                <br>
+                <br>
+                <li>Click start on the right hand side and make sure application is running.</li>
+                <br>
+                <br>
+                <img src="img6.jpg" alt="">
+            </ol>
+        </main>
+    </body>
+</html>
