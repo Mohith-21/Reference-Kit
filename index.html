@@ -6,7 +6,7 @@
   <title>Reference Kit</title>
   <style>
     body {
-      background: linear-gradient(to right, #87CEEB, #1E90FF); /* Updated Sky Blue Gradient */
+      background: linear-gradient(to right, #87CEEB, #1E90FF); 
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       display: flex;
       align-items: center;
@@ -16,13 +16,13 @@
     }
  
     .login-container {
-      background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent White */
+      background-color: rgba(255, 255, 255, 0.8); 
       padding: 30px;
       border-radius: 12px;
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
       width: 350px;
       text-align: center;
-      animation: floatAnimation 3s infinite alternate; /* Floating Animation */
+      animation: floatAnimation 3s infinite alternate; 
     }
  
     @keyframes floatAnimation {
@@ -31,7 +31,7 @@
     }
  
     .login-container h2 {
-      color: #4682B4; /* Steel Blue */
+      color: #4682B4; 
       margin-bottom: 20px;
     }
  
@@ -46,7 +46,7 @@
     }
  
     button {
-      background-color: #87CEEB; /* Green */
+      background-color: #87CEEB; 
       color: white;
       padding: 12px 20px;
       border: none;
@@ -95,24 +95,24 @@
 
     
  
-    // Check if the username and password match the predefined values
+    
     if (username === 'system' && password === 'password') {
-      alert('Login successful!');
+      //alert('Login successful!');
       startLogoutTimer(); 
       window.location.href = 'index1.html';
-      return false; // Allow the form submission
+      return false; 
     } else {
       alert('Invalid username or password. Please try again.');
-      return false; // Prevent the form submission 
+      return false;  
     }
   }
  
   function startLogoutTimer() {
-    // Set a timer to logout after 60 minutes (in milliseconds)
+    
     setTimeout(function() {
       alert('Logout due to inactivity. Please log in again.');
-      // You can add code here to redirect the user to the logout page or perform other logout actions
-    }, 60 * 60 * 1000); // 60 minutes
+      
+    }, 60 * 60 * 1000); //60 min 
   }
 </script>
  
